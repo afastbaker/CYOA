@@ -29,7 +29,7 @@ No known bugs at this time.
 
 ## Support and contact details
 
-_If you have any questions please contact us at: afastbaker@gmail.com_
+_If you have any questions please contact us at: _afastbaker@gmail.com_
 
 ## Technologies Used
 
@@ -39,4 +39,4 @@ _HTML, Javascript, jQuery, Bootstrap and CSS_
 
 *MIT*
 
-Copyright (c) 2018 **_An Epicodus production_**
+Copyright (c) 2018 **Andrew Boggs, Megan Lee, Alex Baker**

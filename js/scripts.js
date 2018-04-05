@@ -26,25 +26,32 @@ function weaponofChoice() {
 }
 
 //UL Logic
-$( document ).ready(function() {
-  showSub();
-  let charName = $("#cname"), sub = $("#subtitle"), charID = $("#idLine");
-
-  function showSub () {
-    setTimeout(function(){
-      sub.show();
-    }, 1500);
+$(document).ready(function() {
+  $("form#get-user-name").submit(function(event){
+    event.preventDefault();
+    var name = $("#new-user-name").val(); // initialize new player
+    newPlayer = new Player(name);
   }
 
-  $("#nbtn").on("click", function(){
-    event.preventDefault();
-    if (charName.val() == ""){
-      $("#nmform").append("<p>You cannot enter the wilds without a name. Please tell us what to call you.</p>").append("<button id= 'ok'>Try again.</button");
-    } else {
-      charID.append("<span>You are " + charName.val() +"</span>");
-      $("#nmform").addClass("hide");
-      $("#raceform").removeClass("hide");
-    }
-  
-  });
-});
+// $( document ).ready(function() {
+//   showSub();
+//   let charName = $("#cname"), sub = $("#subtitle"), charID = $("#idLine");
+//
+//   function showSub () {
+//     setTimeout(function(){
+//       sub.show();
+//     }, 1500);
+//   }
+//
+//   $("#nbtn").on("click", function(){
+//     event.preventDefault();
+//     if (charName.val() == ""){
+//       $("#nmform").append("<p>You cannot enter the wilds without a name. Please tell us what to call you.</p>").append("<button id= 'ok'>Try again.</button");
+//     } else {
+//       charID.append("<span>You are " + charName.val() +"</span>");
+//       $("#nmform").addClass("hide");
+//       $("#raceform").removeClass("hide");
+//     }
+//
+//   });
+// });

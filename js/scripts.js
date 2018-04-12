@@ -1,57 +1,65 @@
+
 //biz logic
 // Check if the user is ready to play!
+//confirm("Ready?")
 
-function stairsOrDoor() {
+// Prompt user and check their age.
+//var age = prompt("This adventure can get quite dangerous. How old are ya?");
+//var ageInput = parseInt(age);
+
+//if ( ageInput > 13 )
+//{
+//    alert("Welcome adventurer! You're all set to play!");
+//}
+//else
+//{
+//    alert("You do know you are too young to face such grave danger?");
+//}
+//UL Logic
+$(document).ready(function() {
+  $("#blanks form").submit(function(event) {
+    $(".userName").hide();
+    $("#story").show();
+    var heroNameInput = $("input#heroName").val();
+
+    $(".heroNameInput").text(heroNameInput);
+
+
+
+
+    event.preventDefault();
+  });
+});
+
+
+function mazeOrWuss() {
     var response = document.getElementById("response").value;
-
-    if (response === 'ENTER MAZE') {
-      document.getElementById("enter").classList.toggle('hidden');
+    //debugger;
+    if (response === 'ENTER MAZE HOUSE') {
+      document.getElementById("maze").classList.toggle('hidden');
       document.getElementById("story").classList.toggle('hidden');
     } else if (response == 'WUSS OUT') {
       document.getElementById("Wuss").classList.toggle('hidden');
       document.getElementById("story").classList.toggle('hidden');
-    } else { document.getElementById("error").innerHTML = "Sorry, I don't understand your input" }
+    }
 }
+function whichDoor() {
+  var chooseDoor = document.getElementById("chooseDoor").value;
 
-function weaponofChoice() {
-  var weapon = document.getElementById("weapon").value;
     debugger;
-    if (weapon === '1' || weapon ==='3') {
-    document.getElementById("poolNoodle").classList.toggle('hidden');
-    document.getElementById("story").classList.toggle('hidden');
-   } else if (weapon == '2') {
-    document.getElementById("sword").classList.toggle('hidden');
-    document.getElementById("story").classList.toggle('hidden');
-  } else { document.getElementById("death").innerHTML = "Grenades don't work on dragons, dude!"}
+  if (chooseDoor === "1") {
+    document.getElementById("mazeRoom").classList.toggle('hidden');
+    document.getElementById("maze").classList.toggle('hidden');
+  } else if (chooseDoor == "2") {
+    document.getElementById("attic").classList.toggle('hidden');
+    document.getElementById("maze").classList.toggle('hidden');
+  } else { document.getElementById("basement").classList.toggle('hidden');
+    document.getElementById("maze").classList.toggle('hidden');
+  }
 }
 
-//UL Logic
-$(document).ready(function() {
-  $("form#get-user-name").submit(function(event){
-    event.preventDefault();
-    var name = $("#new-user-name").val(); // initialize new player
-    newPlayer = new Player(name);
-  }
 
-// $( document ).ready(function() {
-//   showSub();
-//   let charName = $("#cname"), sub = $("#subtitle"), charID = $("#idLine");
-//
-//   function showSub () {
-//     setTimeout(function(){
-//       sub.show();
-//     }, 1500);
-//   }
-//
-//   $("#nbtn").on("click", function(){
-//     event.preventDefault();
-//     if (charName.val() == ""){
-//       $("#nmform").append("<p>You cannot enter the wilds without a name. Please tell us what to call you.</p>").append("<button id= 'ok'>Try again.</button");
-//     } else {
-//       charID.append("<span>You are " + charName.val() +"</span>");
-//       $("#nmform").addClass("hide");
-//       $("#raceform").removeClass("hide");
-//     }
-//
-//   });
-// });
+
+//$(document).ready(function() {
+//  $("#form-group form").submit(function(event) {
+//    var inputheroName = $("input#heroName").val();

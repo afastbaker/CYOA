@@ -1,3 +1,4 @@
+
 .hidden {
   display:none;
 }
@@ -13,7 +14,15 @@
   opacity: .90;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 20px;
+
+}
+
+#response {
+  color: black;
+}
+
+#chooseDoor {
+  color: black;
 }
 
 button {
@@ -29,7 +38,23 @@ button {
 body {
   background-color: black;
   color: white;
-  font-family: cursive;
+  font-family: arial;
+}
+
+header {
+  padding-top:30px;
+  padding-bottom:20px;
+  background-color: grey;
+  margin-bottom: 50px;
+}
+
+input[type=text] {
+  background-color: green;
+  color: white;
+}
+
+#story {
+  display: none;
 }
 
 .jumbotron {
@@ -40,10 +65,11 @@ body {
   background-image: url(../img/creepyhouse.jpg);
   background-size: 100%;
   font-family: bold;
+}
 
 img {
-  width: 400px;
-  height: 300px;
+  border-width: medium;
+  border-style: solid;
   float:left;
   margin-right: 10px;
 }
